@@ -5,8 +5,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-set -o vim
-
 alias vi=vim
 alias UPDATE='sudo pacman -Syu --noconfirm'
 EDITOR=vim
