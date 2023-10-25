@@ -1,12 +1,15 @@
+# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
-set -o vim
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+
+set -o vim
+
 alias vi=vim
 alias UPDATE='sudo pacman -Syu --noconfirm'
-
+EDITOR=vim
 HISTCONTROL=ignoredups
 HISTSIZE=2000
 HISTFILESIZE=2000
