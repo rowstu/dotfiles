@@ -30,3 +30,13 @@ function git_branch() {
         printf "%s" "($(git branch 2> /dev/null | awk '/\*/{print $2}'))";
     fi
 }
+
+# open the default application from the command line
+function open () {
+  xdg-open "$@">/dev/null 2>&1
+}
+
+# run neofetch if it's installed
+if [ -x "$(command -v neofetch)" ]; then
+  neofetch
+fi
